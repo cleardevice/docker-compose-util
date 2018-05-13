@@ -1,4 +1,4 @@
-name: docker-compose
+name: docker-compose-util
 version: "1.21.2"
 summary: Define and run multi-container applications with Docker
 description: |
