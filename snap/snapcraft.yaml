@@ -12,10 +12,14 @@ parts:
   docker-compose:
     plugin: dump
     build-packages: [curl]
-    override-build: |
+    override-pull: |
       curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86_64 -o docker-compose
       chmod +x docker-compose
     organize:
       docker-compose: bin/docker-compose
     prime:
       - bin/*
+
+apps:
+  docker-compose:
+    command: bin/docker-compose
