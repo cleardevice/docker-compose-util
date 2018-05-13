@@ -4,6 +4,7 @@ summary: Define and run multi-container applications with Docker
 description: |
   Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a Compose file to configure your application's services. Then, using a single command, you create and start all the services from your configuration. To learn more about all the features of Compose see the list of features.
   Compose is great for development, testing, and staging environments, as well as CI workflows. You can learn more about each case in Common Use Cases.
+architectures: [amd64]
 grade: stable
 confinement: strict
 
@@ -11,7 +12,7 @@ parts:
   docker-compose:
     plugin: dump
     build-packages: [curl]
-    override-pull: |
+    override-build: |
       curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86_64 -o docker-compose
       chmod +x docker-compose
     organize:
