@@ -7,10 +7,6 @@ description: |
 grade: stable
 confinement: strict
 
-apps:
-  docker-compose:
-    command: docker-compose
-
 parts:
   docker-compose:
     plugin: dump
